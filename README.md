@@ -6,7 +6,7 @@
   Antes de iniciar uma leitura, leitores com certa criteriosidade necessitam de uma opinião anterior ou posterior à sua leitura. O MeLivrando disponibilizará a plataforma para o compartilhamento de opiniões e avaliações para seus pretendentes livros, auxiliando na leitura dos seus usuários. 
 
 ### Funcionalidades
-- [ ] Criar, ler, Atualizar e Remover usuários
+- [ ] Criar, Ler, Atualizar e Remover usuários
 - [ ] Pesquisar livros
 - [ ] Favoritar livros
 - [ ] Adicionar comentários
@@ -20,5 +20,7 @@
 - [ ] Tela de Perfil
 - [ ] Tela de Pesquisa (Inicial) 
 - [ ] Tela de Informações de Livros 
+
 ### Links Úteis
- --- a fazer 
+[Backend](https://github.com/ibiaalice/MeLivrando/tree/master/backend)
+[Frontend](https://github.com/ibiaalice/MeLivrando/tree/master/frontend)
