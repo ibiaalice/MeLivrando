@@ -22,5 +22,7 @@
 - [ ] Tela de Informações de Livros 
 
 ### Links Úteis
-[Backend](https://github.com/ibiaalice/MeLivrando/tree/master/backend)
-[Frontend](https://github.com/ibiaalice/MeLivrando/tree/master/frontend)
+[Backend](https://github.com/ibiaalice/MeLivrando/tree/master/backend/)
+
+
+[Frontend](https://github.com/ibiaalice/MeLivrando/tree/master/frontend/)
