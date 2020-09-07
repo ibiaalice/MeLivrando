@@ -1,0 +1,26 @@
+{
+  "name": "melivrando",
+  "version": "1.0.0",
+  "description": "Um site para apaixonados por livros compartilharem comentários e opiniões sobre suas leituras atuais, passadas ou abandonadas.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibiaalice/MeLivrando.git"
+  },
+  "author": "ibiaalice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibiaalice/MeLivrando/issues"
+  },
+  "homepage": "https://github.com/ibiaalice/MeLivrando#readme"
+}
