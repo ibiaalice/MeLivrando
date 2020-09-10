@@ -2,7 +2,7 @@ const app = require("../../config/serverConfig");
 
 module.exports = function(application){
     application.get('/users/mock', function(req, resp){
-        resp.status(200).json([{}, {}, {}])
+        application.api.controllers.usersCtrl.listAll(application, req, resp);
     });
 
     application.get('/user/:id', function(req, resp){

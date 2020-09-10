@@ -7,23 +7,31 @@
   }
 
   UsersDAO.prototype.insert = function(req, resp){
-      print('insert');
+      console.log('insert');
+      
   }
 
   UsersDAO.prototype.listAll = function(req, resp){
-      print('listAll');
+      console.log('listAll');
+      resp.send('listAll okay');
   }
 
   UsersDAO.prototype.delete = function(req, resp){
-      print('delete');
+      console.log('delete');
+          resp.send('delete okay');
+
   }
 
   UsersDAO.prototype.find = function(req, resp){
-      print('find');
+      console.log('find');
+      resp.send('find okay');
+
   }
 
   UsersDAO.prototype.update = function(req, resp){
-      print('update');
+      console.log('update');
+      resp.send('update okay');
+
   }
 
   
