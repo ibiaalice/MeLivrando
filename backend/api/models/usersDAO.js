@@ -7,7 +7,20 @@
   }
 
   UsersDAO.prototype.insert = function(req, resp){
-      console.log('insert');
+      var user = req.body;
+
+      this._connection.open(function(err, dbClient){
+          
+        dbClient.collection('users', function(err, collection){
+            collection.insert(user, function(err, collection){
+                if(err) resp.status(500).json({'msg':'nao foi possivel adicionar usuario'});
+                else resp.json({'msg':'usuario adicionado com sucesso'});
+
+
+                dbClient.close();
+            });
+        });
+      });
       
   }
 

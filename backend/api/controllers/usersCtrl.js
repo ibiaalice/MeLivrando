@@ -4,9 +4,9 @@
 module.exports.insert = function(application, req, resp){
     var data = req.body;
     console.log(data);
-    resp.send('insert okay');
-    //var connection = application.config.dbConnection;
-    //var usersDAO = new application.api.models.usersDAO(connection);
+    // resp.send('insert okay');
+    var connection = application.config.dbConnection;
+    var usersDAO = new application.api.models.usersDAO(connection);
 
     usersDAO.insert(req, resp);
 }
