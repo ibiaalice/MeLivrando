@@ -1,4 +1,4 @@
-
+var objectId = require('mongodb').ObjectID;
 
 function UsersDAO(connection){
     this._connection = connection();
@@ -42,7 +42,7 @@ UsersDAO.prototype.insert = function(req, resp){
               resp.status(400).json({'msg' : 'erro ao listar todos os usuarios'});
           }
       });
-  }
+}
 
 //   UsersDAO.prototype.delete = function(req, resp){
 //       console.log('delete');
@@ -50,11 +50,34 @@ UsersDAO.prototype.insert = function(req, resp){
 
 //   }
 
-//   UsersDAO.prototype.find = function(req, resp){
-//       console.log('find');
-//       resp.send('find okay');
 
-//   }
+UsersDAO.prototype.find = function(req, resp){
+    var id = req.params.id;
+    // var obj = objectId(id);
+    // console.log(obj);
+    console.log(id);
+    var params = {user : {_id: id}};
+
+    this._connection.open(function(err, dbUser){
+        dbUser.collection('users', function(err, collection){
+            if(err) throw err;
+            else{
+                collection.find(params).toArray(function(err, result){
+                    if(err){ 
+                        resp.status(400).json({'msg':'nao foi possivel encontrar usuario'});
+                    }
+                    else {
+                        console.log(result);
+                        resp.status(200).json(result)
+                    };
+
+                    dbUser.close();
+                }
+                );
+            }
+        });
+    });
+}
 
 //   UsersDAO.prototype.update = function(req, resp){
 //       console.log('update');

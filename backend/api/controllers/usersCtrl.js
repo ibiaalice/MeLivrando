@@ -28,10 +28,10 @@ module.exports.update = function(application, req, resp){
 }
 
 module.exports.find = function(application, req, resp){
-    //var connection = application.config.dbConnection;
-    //var usersDAO = new application.api.models.usersDAO(connection);
+    var connection = application.config.dbConnection;
+    var usersDAO = new application.api.models.usersDAO(connection);
     console.log(req.body)
-    resp.send('find okay');
+
     usersDAO.find(req, resp);
 }
 
