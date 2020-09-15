@@ -13,10 +13,8 @@ module.exports.insert = function(application, req, resp){
 
 module.exports.listAll = function(application, req, resp){
     var data = req.body
-    console.log(req.body);
-    resp.send('listAll okay');
-    //var connection = application.config.dbConnection;
-    //var usersDAO = new application.api.models.usersDAO(connection);
+    var connection = application.config.dbConnection;
+    var usersDAO = new application.api.models.usersDAO(connection);
 
     usersDAO.listAll(req, resp);
 }

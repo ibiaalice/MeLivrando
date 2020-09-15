@@ -9,7 +9,7 @@ module.exports = function(application){
         application.api.controllers.usersCtrl.find(application, req, resp);
     });
 
-    application.post('/user/:id', function(req, resp){
+    application.post('/register/', function(req, resp){
         application.api.controllers.usersCtrl.insert(application, req, resp);
     });
 
