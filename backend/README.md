@@ -20,10 +20,5 @@ ou
 `yarn init`
 
 #### Inicie o servidor
-`npm server.js`
-
-ou
-
-`yarn server.js`
-
+`node background/server.js`
 
