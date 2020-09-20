@@ -13,11 +13,11 @@
 ### Processo de inicialização de backend
 
 #### Primeiramente, instale os pacotes NodeJS:
-`npm init`
+`npm install`
 
 ou
 
-`yarn init`
+`yarn install`
 
 #### Inicie o servidor
 `node background/server.js`
