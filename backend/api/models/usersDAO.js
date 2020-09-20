@@ -10,8 +10,12 @@ UsersDAO.prototype.insert = function(req, resp){
   this._connection.open(function(err, dbUser){
       dbUser.collection('users', function(err, collection){
           collection.insert(user, function(err, result){
-              if(err) resp.status(400).json({'msg': 'nao foi possivel adicionar usuario'});
-              else resp.json({'msg': 'cliente adicionado com sucesso'});
+              if(err) {
+                  resp.status(400).json({'msg': 'nao foi possivel adicionar usuario'});
+              }
+              else{
+                   resp.json({'msg': 'cliente adicionado com sucesso'});
+              }
               dbUser.close();
           });
       });
@@ -53,10 +57,8 @@ UsersDAO.prototype.insert = function(req, resp){
 
 UsersDAO.prototype.find = function(req, resp){
     var id = req.params.id;
-    // var obj = objectId(id);
-    // console.log(obj);
-    console.log(id);
-    var params = {user : {_id: id}};
+    
+    var params = {users : {id: id}};
 
     this._connection.open(function(err, dbUser){
         dbUser.collection('users', function(err, collection){

@@ -2,9 +2,7 @@
 
 
 module.exports.insert = function(application, req, resp){
-    var data = req.body;
-    console.log(data);
-    // resp.send('insert okay');
+
     var connection = application.config.dbConnection;
     var usersDAO = new application.api.models.usersDAO(connection);
 
@@ -23,14 +21,16 @@ module.exports.update = function(application, req, resp){
     //var connection = application.config.dbConnection;
     //var usersDAO = new application.api.models.usersDAO(connection);
     console.log(req.body)
-    resp.send('update okay');
-    usersDAO.update(req, resp);
+    resp.send({'name': 'alguma coisa aqui ', 'email':'alguma@coisa.com', 'password':'1978439727' });
+
+
+
+    //usersDAO.update(req, resp);
 }
 
 module.exports.find = function(application, req, resp){
     var connection = application.config.dbConnection;
     var usersDAO = new application.api.models.usersDAO(connection);
-    console.log(req.body)
 
     usersDAO.find(req, resp);
 }

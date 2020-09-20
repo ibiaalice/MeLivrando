@@ -5,7 +5,6 @@ var connection = function(){
         'melivrando', new mongodb.Server('localhost', 27017, {}),
         {}
     );
-
     return db;
 }
 
