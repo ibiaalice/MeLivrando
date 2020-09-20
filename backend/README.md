@@ -14,10 +14,16 @@
 
 #### Primeiramente, instale os pacotes NodeJS:
 `npm init`
+
+ou
+
 `yarn init`
 
 #### Inicie o servidor
 `npm server.js`
+
+ou
+
 `yarn server.js`
 
 
