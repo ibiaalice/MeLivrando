@@ -1,6 +1,7 @@
 var app = require('./config/serverConfig');
 
 
-app.listen(8080, function(){
-    console.log('server on...');
+PORT = 8080;
+app.listen(PORT, function(){
+    console.log('Servidor em execução na porta ' + PORT);
 });

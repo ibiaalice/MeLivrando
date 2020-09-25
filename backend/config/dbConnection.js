@@ -1,13 +1,8 @@
-var mongodb = require('mongodb');
+const mongoose = require('mongoose');
 
-var connection = function(){
-    var db = new mongodb.Db(
-        'melivrando', new mongodb.Server('localhost', 27017, {}),
-        {}
-    );
-    return db;
-}
+mongoose.Promise = global.Promise;
 
-module.exports = function(){
-    return connection;
-}
+mongoose.connect('mongodb://127.0.0.1:27017/melivrando',{
+    useNewUrlParser:true ,
+    useUnifiedTopology: true
+});

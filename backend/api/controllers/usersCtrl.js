@@ -1,44 +1,52 @@
+const User = require('../models/users.js');
+const {exists} = require('../models/users.js');
 
 
+module.exports.insert = async function(req, resp){
+    try{
+        var user = new User({
+            name:req.body.name,
+            email:req.body.email,
+            password:req.body.password, 
+        });
+        await user.save();
+        resp.status(200).send(user.inspect());
+    }catch(error){
 
-module.exports.insert = function(application, req, resp){
-
-    var connection = application.config.dbConnection;
-    var usersDAO = new application.api.models.usersDAO(connection);
-
-    usersDAO.insert(req, resp);
+    }
 }
 
-module.exports.listAll = function(application, req, resp){
-    var data = req.body
-    var connection = application.config.dbConnection;
-    var usersDAO = new application.api.models.usersDAO(connection);
+module.exports.find = async function(req, resp){
+    const id = req.params.id;
 
-    usersDAO.listAll(req, resp);
+    try{
+        var user = await User.findById(id);
+        resp.status(302).send(user.inspect());
+    }catch(error){
+
+    }
 }
 
-module.exports.update = function(application, req, resp){
-    //var connection = application.config.dbConnection;
-    //var usersDAO = new application.api.models.usersDAO(connection);
-    console.log(req.body)
-    resp.send({'name': 'alguma coisa aqui ', 'email':'alguma@coisa.com', 'password':'1978439727' });
-
-
-
-    //usersDAO.update(req, resp);
+module.exports.findAll =  async function(req, resp){
+    try{
+        const users =  await User.find({});
+        resp.status(200).send(users);
+    }catch(error){
+        resp.status(500).send('deu ruim');
+    }
 }
 
-module.exports.find = function(application, req, resp){
-    var connection = application.config.dbConnection;
-    var usersDAO = new application.api.models.usersDAO(connection);
+module.exports.update = function(req, resp){
 
-    usersDAO.find(req, resp);
 }
 
-module.exports.delete = function(application, req, resp){
-    // var connection = application.config.dbConnection;
-    // var usersDAO = new application.api.models.usersDAO(connection);
-    console.log(req.body)
-    resp.send('delete okay');
-    usersDAO.delete(req, resp);
+module.exports.delete = async function(req, resp){
+    try{
+        const id = req.params.id; 
+        const user = await User.findByIdAndRemove(id);
+        console.log(user.inspect())
+        resp.status(200).send(user.inspect());
+    }catch(error){
+        resp.status(500).send({ 'msg':'erro em buscar usuarios'})
+    }
 }
