@@ -50,3 +50,26 @@ module.exports.delete = async function(req, resp){
         resp.status(500).send({ 'msg':'erro em buscar usuarios'})
     }
 }
+
+module.exports.findByName = async function(req, resp){
+    const name = req.body.name;
+    console.log('algo')
+
+    try{
+        var user = await User.findOne({name:name});
+        resp.status(302).send(user.inspect());
+    }catch(error){
+        resp.status(500).send({'msg':'não foi possivel encontrar usuario'});
+    }
+}
+
+module.exports.login = async function(req, resp){
+    const {email, password} = req.body;
+
+    try{
+        var user = await User.findOne({email:email, password:password});
+        resp.status(302).send(user.inspect());
+    }catch(error){
+        resp.status(500).send({'msg':'não foi possivel fazer login'});
+    }
+}

@@ -21,4 +21,9 @@ module.exports = function(application){
         application.api.controllers.usersCtrl.delete(req, resp);
     });
 
+    application.get('/login/', function(req, resp){ //se ele ta logado, token, id, nome de user
+            console.log('entrando')
+        application.api.controllers.usersCtrl.login(req, resp);
+    });
+
 }
