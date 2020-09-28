@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>MeLivrando | Inscreva-se</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <div>
+        <fieldset>
+            <img src="assets/melivrando_icon.png" width="10%" height="10%" style="float:left;" hspace="20"/>
+            <p><font size="5" hspace="20"> MeLivrando</font></p>
+        </fieldset>
+    </div>
+    <br>
+    <br>
+    
+    <fieldset>
+    <div style="text-align:center">
+        <br>
+        <form action="http://localhost:8080/register/" method="POST" target="_blank">
+            <p>
+                <label class="control-label col-sm-2" for="login">Nome:</label>
+                <input name="name" type="text" class="form-control" id="name" size="8" maxlength="20" value="">
+            </p>
+            <p>
+                <label class="control-label col-sm-2" for="login">E-mail:</label>
+                <input name="email" type="text" class="form-control" id="login" size="8" maxlength="20" value="">
+            </p>
+            <p>
+                <label class="control-label col-sm-2" for="login">Senha:</label>
+                <input name="password" type="text" class="form-control" id="password" size="8" maxlength="20" value="">
+            </p>
+            <p>
+                <label class="control-label col-sm-2" for="login">Confirme sua Senha:</label>
+                <input name="password2" type="text" class="form-control" id="password2" size="8" maxlength="20" value="">
+            </p>
+            <br>
+            <button class="btn btn-primary" type="submit" value="Submit">Cadastrar</button>
+        
+        </form>
+        <br>
+        
+    </div>
+
+    <div style="text-align:center">
+        <p>Já está cadastrado? <a href="login.html">Login</a></p>
+    </div>
+    </fieldset>
+    <br>
+    <br>
+    <footer>
+        <div class="container well well-sm">
+          &copy; 2020&nbsp;<a href="https://github.com/ibiaalice">Beatriz Alice</a><br>
+        </div>
+    </footer>
+</body>
+</html>
