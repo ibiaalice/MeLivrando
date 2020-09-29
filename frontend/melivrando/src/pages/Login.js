@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './Login.css';
 import logo from '../assets/melivrando_icon.png';
 
 
@@ -11,10 +12,13 @@ export default function Login(props){
         this.props.history.push('/main')
     }
 
+
     return(
         <div className='login'>
+           
             <form onSubmit={handleSubmit}>
                 <img className='logo' src={logo} alt='ML'/>
+                <h1 className='title'>Seja bem vindo, faça login para continuar </h1>
                 <input
                     placeholder='Digite o email de login'
                     value={email}
@@ -23,10 +27,12 @@ export default function Login(props){
                 <input type='password'
                     placeholder= 'Digite sua senha'
                 />
-
-                <button type='submit'>
-                    <p className='nameButtom'>Entrar</p>
+                
+               <button type='submit' className='buttom'>
+                    <p className='enterButtom'>Entrar</p>
                 </button>
+                
+ 
             </form>
 
         </div>
