@@ -1,0 +1,27 @@
+.navbar { 
+    background-color:rgb(43%, 61%, 80%);
+    color:rgb(47%, 75%, 62%);
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
+  
+  .navbar logo{
+    max-width:20px;
+    max-height:15px;
+    width: auto;
+    height: auto;
+  }
+
+  .navbar .routes {
+    align-items: flex-start;
+    justify-content: space-between;
+    display: block;
+    grid-template-columns: 110px 110px 110px;
+  }
+  
+  .navbar input {
+    padding: 15px;
+    height: 40px;
+    margin: 10px;
+  }

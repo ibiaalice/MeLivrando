@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+div#container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+
+}
+
+.Book{
+  margin: 50px;
+  width: 300px;
+}

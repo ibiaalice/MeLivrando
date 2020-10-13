@@ -1,0 +1,16 @@
+.Home a {
+    color: rgb(0, 0, 0); 
+    border: solid slategrey 1px;
+    border-radius: 10px;
+    margin: 4px;
+  }
+  
+  .Home a:hover {
+    color: azure;
+    background-color: rgb(153, 144, 161);
+  }
+  
+  a img {
+    border-radius: 20px;
+    height: 150px;
+  }
