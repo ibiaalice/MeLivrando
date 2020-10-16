@@ -4,9 +4,9 @@ function Search(props){
     return(
         <input 
         type='search' 
-        id='search' 
+        id='searchbar' 
         value={props.search}
-        onChange={(book) => props.setSearch(book.target.value) } />
+        onChange={(e) => props.setSearch(e.target.value)} />
     );
 }
 

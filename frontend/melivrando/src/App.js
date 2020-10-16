@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Switch, Route } from 'react-router';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
-import Main from './pages/Main';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Main from './pages/Main/Main';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
 import './App.css';
 
 const BOOKS = [
@@ -40,13 +40,13 @@ const BOOKS = [
 ];
 
 function App() {
-  const [src, setSrc] = useState('')
+  const [search, setSearch] = useState('')
   return (
     <div className='App'>
       <Header />
-      <NavBar search={src} setSearch={setSrc} />
+      <NavBar search={search} setSearch={setSearch} />
       <Switch>
-        <Route exact path='/' render={props =><Main name='Lista de livros' books={BOOKS} search={src} setSearch={setSrc}/>} />
+        <Route exact path='/' render={props =><Main name='Lista de livros' books={BOOKS} search={search} setSearch={setSearch}/>} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
       </Switch>

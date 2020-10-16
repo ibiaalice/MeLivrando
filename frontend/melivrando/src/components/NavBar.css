@@ -1,27 +1,43 @@
 .navbar { 
     background-color:rgb(43%, 61%, 80%);
-    color:rgb(47%, 75%, 62%);
+    color: rgb(248, 228, 124);
     align-items: center;
     justify-content: space-between;
     display: flex;
   }
+
+  .navbar .rightBar{
+    align-items: center;
+    display: flex;
+  }
+
+  .navbar .leftBar{
+
+    
+  }
   
-  .navbar logo{
-    max-width:20px;
-    max-height:15px;
+  .navbar .logo {
+    padding: 5px;
+    max-width:100px;
+    max-height:100px;
     width: auto;
     height: auto;
   }
 
   .navbar .routes {
+    padding:10px;
     align-items: flex-start;
-    justify-content: space-between;
-    display: block;
-    grid-template-columns: 110px 110px 110px;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 50px 50px 80px;
+  }
+
+  .navbar .title{
+    justify-self: start;
   }
   
   .navbar input {
-    padding: 15px;
+    align-items: baseline;
     height: 40px;
     margin: 10px;
   }

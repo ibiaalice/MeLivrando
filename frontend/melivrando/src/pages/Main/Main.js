@@ -1,15 +1,18 @@
 import React from 'react'
-import Book from '../components/Book';
+import Book from '../../components/Book';
 import './Main.css';
 
 function Main(props) {
   return (
       <div className='Main'>
-        <h2>{props.name}</h2>
+        <div className='title'>
+          <h2>{props.name}</h2>
+        </div>
+         
         <br />
         <div id='container'>
          {
-          props.books.filter(book => book.title.includes(props.seach)).map(
+          props.books.filter(book => book.title.includes(props.search)).map(
             book => <a href='/'>
               <Book
                 img={book.img}
