@@ -37,7 +37,11 @@
   }
   
   .navbar input {
+    outline: none;
     align-items: baseline;
     height: 40px;
     margin: 10px;
+    margin: 10px;
+    border: 1px solid #6D9BCC;
+    border-radius:  15px;
   }

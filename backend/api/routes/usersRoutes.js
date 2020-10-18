@@ -5,11 +5,15 @@ module.exports = function(application){
         application.api.controllers.usersCtrl.findAll(req, resp);
     });
 
+    application.get('/connect', function(req, resp){
+        resp.send('conectado nesse caraio');
+    })
+
     application.get('/user/:id', function(req, resp){ //se ele ta logado, token, id, nome de user
         application.api.controllers.usersCtrl.find(req, resp);
     });
 
-    application.post('/register/', function(req, resp){ // registrar 
+    application.post('/register', function(req, resp){ // registrar 
         application.api.controllers.usersCtrl.insert(req, resp);
     });
 
@@ -21,7 +25,7 @@ module.exports = function(application){
         application.api.controllers.usersCtrl.delete(req, resp);
     });
 
-    application.get('/login/', function(req, resp){ //se ele ta logado, token, id, nome de user
+    application.get('/login', function(req, resp){ //se ele ta logado, token, id, nome de user
             console.log('entrando')
         application.api.controllers.usersCtrl.login(req, resp);
     });

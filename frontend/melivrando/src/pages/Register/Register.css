@@ -1,0 +1,48 @@
+.Register{
+    height: 100%;
+    width: 100%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #6D9BCC;
+    padding-bottom: 12%;
+}
+
+.Register .RegisterForm{
+    padding: 30px;
+    background-color: #B4F7D9;
+    border-radius: 15px;
+}
+
+.Register .logoItems{
+    padding-left: 25%;
+    align-items: center;
+    justify-content: center;
+    background-color: magenta;
+}
+
+.Register .inputs{
+    padding-left: 35%;
+    background-color: lightcoral;
+    display: grid;
+    grid-template-columns: 150px 150px 180px;
+}
+
+
+.Register form input{
+    outline: none;
+    margin: 10px;
+    border: 1px solid #6D9BCC;
+    border-radius:  15px;
+    height: 48px;
+    font-size: 16px;
+    color: #666;    
+}
+
+.logo {
+    max-width:300px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+}
+

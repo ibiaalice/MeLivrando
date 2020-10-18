@@ -4,7 +4,7 @@ import logo from '../../assets/melivrando_icon.png';
 
 
 
-export default function Login(props){
+function Login(props){
     const [email, setEmail] = useState('');
 
     function handleSubmit(e){
@@ -34,3 +34,5 @@ export default function Login(props){
         </div>
     );
 }
+
+export default Login;

@@ -3,6 +3,7 @@ const {exists} = require('../models/users.js');
 
 
 module.exports.insert = async function(req, resp){
+    console.log(req.body);
     try{
         var user = new User({
             name:req.body.name,

@@ -8,7 +8,7 @@
     "consign": "^0.1.6",
     "express": "^4.17.1",
     "mongoose": "^4.8.5",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.5"
   },
   "devDependencies": {},
   "scripts": {
