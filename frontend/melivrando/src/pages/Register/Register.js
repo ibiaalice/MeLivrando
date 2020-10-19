@@ -15,7 +15,7 @@ function Register(props){
         data.append('email', email);
         data.append('password', password);
 
-        await api.post('register',data);
+        await api.post('register',data.values);
 
     }
     return(
