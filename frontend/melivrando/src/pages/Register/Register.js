@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import './Register.css';
 import logo from '../../assets/melivrando_icon.png';
 import api from '../../services/api';
+import qs from 'qs';
+
 function Register(props){
 
     const [email, setEmail] = useState('');
@@ -10,13 +13,13 @@ function Register(props){
 
     async function  handleRegister(e){
         e.preventDefault();
-        const data = new FormData();
-        data.append('name', name);
-        data.append('email', email);
-        data.append('password', password);
+        const data = {
+            'name':name,
+            'email':email,
+            'password':password
+        }
 
-        await api.post('register',data.values);
-
+        await api.post('register', qs.stringify(data));
     }
     return(
 
