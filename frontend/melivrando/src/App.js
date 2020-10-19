@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router';
-import Header from './components/Header';
 import NavBar from './components/NavBar';
 import Main from './pages/Main/Main';
 import Login from './pages/Login/Login';
@@ -43,7 +42,6 @@ function App() {
   const [search, setSearch] = useState('')
   return (
     <div className='App'>
-      <Header />
       <NavBar search={search} setSearch={setSearch} />
       <Switch>
         <Route exact path='/' render={props =><Main name='Lista de livros' books={BOOKS} search={search} setSearch={setSearch}/>} />
