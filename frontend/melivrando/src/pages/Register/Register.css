@@ -18,12 +18,10 @@
     padding-left: 25%;
     align-items: center;
     justify-content: center;
-    background-color: magenta;
 }
 
 .Register .inputs{
     padding-left: 35%;
-    background-color: lightcoral;
     display: grid;
     grid-template-columns: 150px 150px 180px;
 }
@@ -39,7 +37,28 @@
     color: #666;    
 }
 
+.Register Form .bottom{
+    font:bold 24px Helvetica;
+    font-style:normal;
+    color:#ffffff;
+    background:#e20eb2;
+    box-shadow:0px 0px 4px #ff00ff;
+    -moz-box-shadow:0px 0px 4px #ff00ff;
+    -webkit-box-shadow:0px 0px 4px #ff00ff;
+    width:250px;
+    padding:20px 40px;
+    cursor:pointer;
+    margin:0 auto;
+    }
+
+.bottom:active{
+    cursor:pointer;
+    position:relative;
+    top:2px;
+}
+
 .logo {
+    align-items: center;
     max-width:300px;
     max-height:250px;
     width: auto;

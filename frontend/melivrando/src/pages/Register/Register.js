@@ -50,7 +50,7 @@ function Register(props){
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                 <button type="submit"> Inscrever-se </button>
+                 <button className='bottom' type="submit"> Cadastrar-se </button>
             </form>
             </div>
             </div>
