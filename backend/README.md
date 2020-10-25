@@ -1,7 +1,7 @@
 # MeLivrando - backend
 
 ### Funcionalidades
-- [ ] Criar, Ler, Atualizar e Remover usuários
+- [x] Criar, Ler, Atualizar e Remover usuários
 - [ ] Pesquisar livros
 - [ ] Favoritar livros
 - [ ] Adicionar comentários

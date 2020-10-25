@@ -15,11 +15,11 @@
 - [ ] Avaliar comentários
 
 ### Telas
-- [ ] Tela de Login
-- [ ] Tela de Cadastro
-- [ ] Tela de Perfil
-- [ ] Tela de Pesquisa (Inicial) 
-- [ ] Tela de Informações de Livros 
+- [x] Tela de Login - Irá mostrar um formulário de entrada de dados para a execução do login de usuário;
+- [x] Tela de Cadastro - Irá mostrar um formulário para entrada de dados de cadastro de usuário;
+- [ ] Tela de Perfil - Irá mostrar uma tela com as informações de usuário e livros selecionados pelo usuário;
+- [x] Tela de Pesquisa (Inicial) - irá mostrar uma listagem de livros, com uma barra de pesquisa;
+- [ ] Tela de Informações de Livros - irá mostrar as informações de cada livro individualmente, com comentários de usuários e informações de avaliações;
 
 ### Links Úteis
 [Backend](https://github.com/ibiaalice/MeLivrando/tree/master/backend/)
